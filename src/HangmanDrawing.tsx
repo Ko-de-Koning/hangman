@@ -24,6 +24,7 @@ const BODY = (
     }}
   />
 );
+
 const RIGHT_ARM = (
   <div
     style={{
@@ -32,7 +33,7 @@ const RIGHT_ARM = (
       background: "black",
       position: "absolute",
       top: "150px",
-      right: -100,
+      right: "-100px",
       rotate: "-30deg",
       transformOrigin: "left bottom",
     }}
@@ -47,7 +48,7 @@ const LEFT_ARM = (
       background: "black",
       position: "absolute",
       top: "150px",
-      right: 10,
+      right: "10px",
       rotate: "30deg",
       transformOrigin: "right bottom",
     }}
@@ -62,7 +63,7 @@ const RIGHT_LEG = (
       background: "black",
       position: "absolute",
       top: "210px",
-      right: -90,
+      right: "-90px",
       rotate: "60deg",
       transformOrigin: "left bottom",
     }}
@@ -120,13 +121,7 @@ export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
           marginLeft: "120px",
         }}
       />
-      <div
-        style={{
-          height: "10px",
-          width: "250px",
-          background: "black",
-        }}
-      />
+      <div style={{ height: "10px", width: "250px", background: "black" }} />
     </div>
   );
 }

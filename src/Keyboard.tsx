@@ -30,10 +30,6 @@ const KEYS = [
 ];
 
 type KeyboardProps = {
-<<<<<<< HEAD
-=======
-  disabled?: boolean;
->>>>>>> 8cb092c (completed-win-lose-logic)
   activeLetters: string[];
   inactiveLetters: string[];
   addGuessedLetter: (letter: string) => void;
@@ -43,10 +39,6 @@ export function Keyboard({
   activeLetters,
   inactiveLetters,
   addGuessedLetter,
-<<<<<<< HEAD
-=======
-  disabled = false,
->>>>>>> 8cb092c (completed-win-lose-logic)
 }: KeyboardProps) {
   return (
     <div
@@ -62,17 +54,10 @@ export function Keyboard({
         return (
           <button
             onClick={() => addGuessedLetter(key)}
-<<<<<<< HEAD
             className={
               '${styles.btn} ${isActive ? styles.active : ""} ${isInactive ? styles.inactive : ""} '
             }
             disabled={isInactive || isActive}
-=======
-            className={`${styles.btn} ${isActive ? styles.active : ""} ${
-              isInactive ? styles.inactive : ""
-            }`}
-            disabled={isInactive || isActive || disabled}
->>>>>>> 8cb092c (completed-win-lose-logic)
             key={key}
           >
             {key}
@@ -82,8 +67,5 @@ export function Keyboard({
     </div>
   );
 }
-<<<<<<< HEAD
 
 export default Keyboard;
-=======
->>>>>>> 8cb092c (completed-win-lose-logic)

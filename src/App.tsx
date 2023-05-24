@@ -1,13 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 
 import { HangmanDrawing } from "./HangmanDrawing";
-<<<<<<< HEAD
-import HangmanWord from "./HangmanWord";
-import Keyboard from "./Keyboard";
-=======
 import { HangmanWord } from "./HangmanWord";
 import { Keyboard } from "./Keyboard";
->>>>>>> 8cb092c (completed-win-lose-logic)
 import words from "./wordList.json";
 
 function getWord() {
@@ -22,15 +17,6 @@ function App() {
     (letter) => !wordToGuess.includes(letter)
   );
 
-<<<<<<< HEAD
-  const addGuessedLetter = useCallback(
-    (letter: string) => {
-      if (guessedLetters.includes(letter)) return;
-
-      setGuessedLetters((currentLetters) => [...currentLetters, letter]);
-    },
-    [guessedLetters]
-=======
   const isLoser = incorrectLetters.length >= 6;
   const isWinner = wordToGuess
     .split("")
@@ -43,7 +29,6 @@ function App() {
       setGuessedLetters((currentLetters) => [...currentLetters, letter]);
     },
     [guessedLetters, isWinner, isLoser]
->>>>>>> 8cb092c (completed-win-lose-logic)
   );
 
   useEffect(() => {
@@ -62,8 +47,6 @@ function App() {
     };
   }, [guessedLetters]);
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const key = e.key;
@@ -81,7 +64,6 @@ function App() {
     };
   }, []);
 
->>>>>>> 8cb092c (completed-win-lose-logic)
   return (
     <div
       style={{
@@ -105,10 +87,7 @@ function App() {
       />
       <div style={{ alignSelf: "stretch" }}>
         <Keyboard
-<<<<<<< HEAD
-=======
           disabled={isWinner || isLoser}
->>>>>>> 8cb092c (completed-win-lose-logic)
           activeLetters={guessedLetters.filter((letter) =>
             wordToGuess.includes(letter)
           )}
